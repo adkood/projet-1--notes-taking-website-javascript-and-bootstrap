@@ -27,14 +27,17 @@ function shownotes() {
     }
 
     let html = "";
+    // var beep=new Audio();
+    // beep.src="beep.mp3";
 
+    
     notesobj.forEach(function(element, index){
         html +=`
         <div class="card notecard my-2 mx-2" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Note ${index+1}</h5>
             <p class="card-text">${element}</p>
-            <a href="#" id="${index}" onclick="deletenote(this.id)" class="btn btn-primary" id="addbtn">Delete it Damnit</a>
+            <a href="#" id="${index}" onclick="beep.play();deletenote(this.id)" class="btn btn-primary" id="addbtn">Delete it Damnit</a>
         </div>
         </div>
         `;
